@@ -16,8 +16,8 @@ $transition-time: 0.5s;
 #catan-board {
   @include calc(padding-top, $hex-size * $hex-margin-overlap-multiplier / 2);
   @include calc(padding-bottom, $hex-size * $hex-margin-overlap-multiplier / 2);
-  @include calc(min-height, $hex-size * 5);
   @include align-items(center);
+  @include flexbox();
   @include flex(1);
   @include flex-direction(column);
   @include justify-content(center);
@@ -58,7 +58,6 @@ $transition-time: 0.5s;
   #catan-board {
     @include calc(padding-top, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
     @include calc(padding-bottom, $hex-size-tablet * $hex-margin-overlap-multiplier/ 2);
-    @include calc(min-height, $hex-size-tablet * 5);
   }
 
 }
@@ -68,7 +67,6 @@ $transition-time: 0.5s;
   #catan-board {
     @include calc(padding-top, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
     @include calc(padding-bottom, $hex-size-medium-screen * $hex-margin-overlap-multiplier/ 2);
-    @include calc(min-height, $hex-size-medium-screen * 5);
   }
 
   #randomize {
@@ -85,7 +83,6 @@ $transition-time: 0.5s;
   #catan-board {
     @include calc(padding-top, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
     @include calc(padding-bottom, $hex-size-large-screen * $hex-margin-overlap-multiplier/ 2);
-    @include calc(min-height, $hex-size-large-screen * 5);
   }
 
 }
