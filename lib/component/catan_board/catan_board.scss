@@ -23,7 +23,7 @@ $transition-time: 0.5s;
   @include justify-content(center);
   background: radial-gradient(ellipse at center, darken($sand, 10) 0%, $sand 50%);
   -webkit-transform: perspective(1400px) rotateX(60deg);
-  transform: perspective(1400px) rotateX(60deg);
+  transform: perspective(1400px) rotateX(40deg);
 
   .row {
     @include flexbox();
