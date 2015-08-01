@@ -1,0 +1,91 @@
+@import "../../../web/css/colors";
+@import "../../../web/css/dimensions";
+@import "../../../web/css/mixins";
+@import "../../../web/css/flexbox";
+
+$transition-time: 0.5s;
+
+#container {
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#catan-board {
+  @include calc(padding-top, $hex-size * $hex-margin-overlap-multiplier / 2);
+  @include calc(padding-bottom, $hex-size * $hex-margin-overlap-multiplier / 2);
+  @include calc(min-height, $hex-size * 5);
+  @include align-items(center);
+  @include flex(1);
+  @include flex-direction(column);
+  @include justify-content(center);
+  background: radial-gradient(ellipse at center, darken($sand, 10) 0%, $sand 50%);
+  -webkit-transform: perspective(1400px) rotateX(60deg);
+  transform: perspective(1400px) rotateX(60deg);
+
+  .row {
+    @include flexbox();
+    @include flex-wrap(nowrap);
+    @include justify-content(center);
+  }
+}
+
+#randomize {
+  @include align-self(flex-end);
+  background: $ocean;
+  border: 0;
+  border-top: 5px solid lighten($ocean, 5);
+  color: #fff;
+  font: 2rem/2rem Helvetica, sans-serif;
+  outline: 0;
+  padding: 20px;
+  transition: background $transition-time ease;
+  width: 100%;
+
+  &:hover {
+    background: darken($ocean, 10);
+  }
+
+  &:active {
+    background: darken($ocean, 20);
+  }
+}
+
+@media (min-width: $tablet) {
+
+  #catan-board {
+    @include calc(padding-top, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
+    @include calc(padding-bottom, $hex-size-tablet * $hex-margin-overlap-multiplier/ 2);
+    @include calc(min-height, $hex-size-tablet * 5);
+  }
+
+}
+
+@media (min-width: $medium-screen) {
+
+  #catan-board {
+    @include calc(padding-top, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
+    @include calc(padding-bottom, $hex-size-medium-screen * $hex-margin-overlap-multiplier/ 2);
+    @include calc(min-height, $hex-size-medium-screen * 5);
+  }
+
+  #randomize {
+    @include align-self(center);
+    border-radius: 10px;
+    margin: 20px;
+    width: auto;
+  }
+
+}
+
+@media (min-width: $large-screen) {
+
+  #catan-board {
+    @include calc(padding-top, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
+    @include calc(padding-bottom, $hex-size-large-screen * $hex-margin-overlap-multiplier/ 2);
+    @include calc(min-height, $hex-size-large-screen * 5);
+  }
+
+}

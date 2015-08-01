@@ -1,0 +1,20 @@
+<div id="container">
+  <div id="catan-board">
+    <div class="row">
+      <catan-hex ng-repeat="hex in board.hexes | slice:0:3" resource="hex.resource" value="hex.value"></catan-hex>
+    </div>
+    <div class="row">
+      <catan-hex ng-repeat="hex in board.hexes | slice:3:7" resource="hex.resource" value="hex.value"></catan-hex>
+    </div>
+    <div class="row">
+      <catan-hex ng-repeat="hex in board.hexes | slice:7:12" resource="hex.resource" value="hex.value"></catan-hex>
+    </div>
+    <div class="row">
+      <catan-hex ng-repeat="hex in board.hexes | slice:12:16" resource="hex.resource" value="hex.value"></catan-hex>
+    </div>
+    <div class="row">
+      <catan-hex ng-repeat="hex in board.hexes | slice:16:19" resource="hex.resource" value="hex.value"></catan-hex>
+    </div>
+  </div>
+  <button id="randomize" ng-click="randomize()">Randomize</button>
+</div>

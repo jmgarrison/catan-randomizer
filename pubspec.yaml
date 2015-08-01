@@ -12,5 +12,6 @@ dev_dependencies:
 transformers:
 - angular:
     html_file:
+      - lib/component/catan_board/catan_board.html
       - lib/component/catan_hex/catan_hex.html
 - sass
