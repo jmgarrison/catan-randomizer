@@ -74,7 +74,9 @@ $transition-time: 0.5s;
 
   #randomize {
     @include align-self(center);
+    border-bottom: 5px solid lighten($ocean, 5);
     border-radius: 10px;
+    border-top: 0;
     margin: 20px;
     width: auto;
   }
