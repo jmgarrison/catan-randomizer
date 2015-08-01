@@ -14,9 +14,9 @@ $transition-time: 0.5s;
 }
 
 #catan-board {
-  @include calc(padding-top, $hex-size * $hex-margin-overlap-multiplier / 2);
-  @include calc(padding-bottom, $hex-size * $hex-margin-overlap-multiplier / 2);
   @include align-items(center);
+  @include calc(padding-bottom, $hex-size * $hex-margin-overlap-multiplier / 2);
+  @include calc(padding-top, $hex-size * $hex-margin-overlap-multiplier / 2);
   @include flexbox();
   @include flex(1);
   @include flex-direction(column);
@@ -59,8 +59,8 @@ $transition-time: 0.5s;
 @media (min-width: $tablet) {
 
   #catan-board {
-    @include calc(padding-top, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
     @include calc(padding-bottom, $hex-size-tablet * $hex-margin-overlap-multiplier/ 2);
+    @include calc(padding-top, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
   }
 
 }
@@ -68,8 +68,8 @@ $transition-time: 0.5s;
 @media (min-width: $medium-screen) {
 
   #catan-board {
-    @include calc(padding-top, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
     @include calc(padding-bottom, $hex-size-medium-screen * $hex-margin-overlap-multiplier/ 2);
+    @include calc(padding-top, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
   }
 
   #randomize {
@@ -84,8 +84,8 @@ $transition-time: 0.5s;
 @media (min-width: $large-screen) {
 
   #catan-board {
-    @include calc(padding-top, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
     @include calc(padding-bottom, $hex-size-large-screen * $hex-margin-overlap-multiplier/ 2);
+    @include calc(padding-top, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
   }
 
 }

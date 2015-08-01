@@ -6,9 +6,9 @@
 $transition-time: 0.5s;
 
 .hex-wrapper {
-  @include calc(margin-right, $hex-size * $hex-margin-overlap-multiplier / 2);
-  @include calc(margin-left, $hex-size * $hex-margin-overlap-multiplier / 2);
   @include align-items(center);
+  @include calc(margin-left, $hex-size * $hex-margin-overlap-multiplier / 2);
+  @include calc(margin-right, $hex-size * $hex-margin-overlap-multiplier / 2);
   @include flexbox();
   @include justify-content(center);
   height: $hex-size;
@@ -99,8 +99,8 @@ $transition-time: 0.5s;
 @media (min-width: $tablet) {
 
   .hex-wrapper {
+    @include calc(margin-left, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
     @include calc(margin-right, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
-    @include calc(margin-left, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);;
     height: $hex-size-tablet;
     width: $hex-size-tablet;
 
@@ -116,8 +116,8 @@ $transition-time: 0.5s;
 @media (min-width: $medium-screen) {
 
   .hex-wrapper {
-    @include calc(margin-right, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
     @include calc(margin-left,  $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
+    @include calc(margin-right, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
     height:  $hex-size-medium-screen;
     width:  $hex-size-medium-screen;
 
@@ -134,8 +134,8 @@ $transition-time: 0.5s;
 @media (min-width: $large-screen) {
 
   .hex-wrapper {
-    @include calc(margin-right, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
     @include calc(margin-left, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
+    @include calc(margin-right, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
     height: $hex-size-large-screen;
     width: $hex-size-large-screen;
 
