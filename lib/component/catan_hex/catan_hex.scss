@@ -1,0 +1,150 @@
+@import "../../../web/css/colors";
+@import "../../../web/css/dimensions";
+@import "../../../web/css/mixins";
+@import "../../../web/css/flexbox";
+
+$transition-time: 0.5s;
+
+.hex-wrapper {
+  @include calc(margin-right, $hex-size * $hex-margin-overlap-multiplier / 2);
+  @include calc(margin-left, $hex-size * $hex-margin-overlap-multiplier / 2);
+  @include align-items(center);
+  @include flexbox();
+  @include justify-content(center);
+  height: $hex-size;
+  position: relative;
+  -webkit-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+  width: $hex-size;
+
+  .hex {
+    @include calc(width, 100% * $hex-side-multiplier);
+    @include flexbox();
+    background: #000;
+    height: 100%;
+    transition: background $transition-time ease;
+
+    &:before, &:after {
+      @include calc(right, (100% / 2) - ((100% * $hex-side-multiplier) / 2));
+      background-color: inherit;
+      content: '';
+      height: inherit;
+      position: absolute;
+      top: 0;
+      width: inherit;
+    }
+
+    &:before {
+      -webkit-transform: rotateZ(60deg);
+      transform: rotateZ(60deg);
+    }
+
+    &:after {
+      -webkit-transform: rotateZ(-60deg);
+      transform: rotateZ(-60deg);
+    }
+
+    &.wood {
+      background: $hex-wood;
+    }
+
+    &.ore {
+      background: $hex-ore;
+    }
+
+    &.sheep {
+      background: $hex-sheep;
+    }
+
+    &.desert {
+      background: $hex-desert;
+    }
+
+    &.brick {
+      background: $hex-brick;
+    }
+
+    &.wheat {
+      background: $hex-wheat;
+    }
+
+  }
+
+  .value {
+    @include align-items(center);
+    @include flexbox();
+    @include justify-content(center);
+    background: rgba($hex-desert, 0.8);
+    border-radius: 50%;
+    border: 1px solid rgba(#fff, .3);
+    box-shadow: 0 0 30px rgba(#fff, .4);
+    font-family: georgia, serif;
+    font-size: $hex-value-font-size;
+    height: $hex-value-size;
+    margin: auto;
+    position: relative;
+    text-shadow: 1px 1px 0 rgba(#fff, .5);
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: $hex-value-size;
+    z-index: 2;
+
+    &.probable {
+      color: $probable;
+    }
+  }
+
+}
+
+@media (min-width: $tablet) {
+
+  .hex-wrapper {
+    @include calc(margin-right, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);
+    @include calc(margin-left, $hex-size-tablet * $hex-margin-overlap-multiplier / 2);;
+    height: $hex-size-tablet;
+    width: $hex-size-tablet;
+
+    .value {
+      font-size: $hex-value-font-size-tablet;
+      height: $hex-value-size-tablet;
+      width: $hex-value-size-tablet;
+    }
+  }
+
+}
+
+@media (min-width: $medium-screen) {
+
+  .hex-wrapper {
+    @include calc(margin-right, $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
+    @include calc(margin-left,  $hex-size-medium-screen * $hex-margin-overlap-multiplier / 2);
+    height:  $hex-size-medium-screen;
+    width:  $hex-size-medium-screen;
+
+
+    .value {
+      font-size: $hex-value-font-size-medium-screen;
+      height: $hex-value-size-medium-screen;
+      width: $hex-value-size-medium-screen;
+    }
+  }
+
+}
+
+@media (min-width: $large-screen) {
+
+  .hex-wrapper {
+    @include calc(margin-right, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
+    @include calc(margin-left, $hex-size-large-screen * $hex-margin-overlap-multiplier / 2);
+    height: $hex-size-large-screen;
+    width: $hex-size-large-screen;
+
+
+    .value {
+      font-size: $hex-value-font-size-large-screen;
+      height: $hex-value-size-large-screen;
+      width: $hex-value-size-large-screen;
+    }
+  }
+
+}

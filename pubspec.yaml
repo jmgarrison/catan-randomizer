@@ -10,5 +10,7 @@ dev_dependencies:
   mockito: "^0.10.1"
   test: '>=0.12.0 <0.13.0'
 transformers:
-- angular
+- angular:
+    html_file:
+      - lib/component/catan_hex/catan_hex.html
 - sass
