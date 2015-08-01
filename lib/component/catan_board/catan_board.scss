@@ -42,6 +42,9 @@ $transition-time: 0.5s;
   outline: 0;
   padding: 20px;
   transition: background $transition-time ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
   width: 100%;
 
   &:hover {
