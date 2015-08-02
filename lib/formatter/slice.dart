@@ -4,7 +4,7 @@ import 'package:angular/angular.dart';
 
 @Formatter(name: 'slice')
 class SliceFilter {
-  List call(List list, start, end) {
+  List call(list, int start, int end) {
     if (list is Iterable) {
       return list.sublist(start, end);
     }
