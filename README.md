@@ -2,6 +2,8 @@
 
 A lightweight AngularDart application for randomizing 4-player Settlers of Catan Boards.
 
+![](https://github.com/jmgarrison/catan-randomizer/blob/master/readme/sample.gif)
+
 ## Setup
 
 Install the [Dart SDK](https://www.dartlang.org/downloads/) and [Sass](http://sass-lang.com/install). Download [Webstorm](https://www.jetbrains.com/webstorm/download/) for development.
