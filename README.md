@@ -1,6 +1,6 @@
 # Catan Randomizer
 
-A lightweight AngularDart application for randomizing 4-player Settlers of Catan Boards.
+A lightweight AngularDart application for randomizing 4-player Settlers of Catan Boards. [See it in action!](http://jmgarrison.github.io/catan-randomizer/)
 
 ![](https://github.com/jmgarrison/catan-randomizer/blob/master/readme/sample.gif)
 
